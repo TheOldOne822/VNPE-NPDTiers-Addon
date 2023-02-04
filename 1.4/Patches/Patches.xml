@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Add /comps/li/compClass if there are no comps yet. -->
+  <!-- Add /li/compClass to /comps if exists (i.e. other mod already added the comps field first) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="FridgeHopper"]/comps</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FridgeHopper"]</xpath>
+      <value>
+        <comps>
+          <li Class="VNPE.CompProperties_RegisterToGrinder" />
+        </comps>
+      </value>
+    </nomatch>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FridgeHopper"]/comps</xpath>
+      <value>
+        <li Class="VNPE.CompProperties_RegisterToGrinder" />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="FreezerHopper"]/comps</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FreezerHopper"]</xpath>
+      <value>
+        <comps>
+          <li Class="VNPE.CompProperties_RegisterToGrinder" />
+        </comps>
+      </value>
+    </nomatch>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FreezerHopper"]/comps</xpath>
+      <value>
+        <li Class="VNPE.CompProperties_RegisterToGrinder" />
+      </value>
+    </match>
+  </Operation>
+
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="INutrientPasteDispenser"]/comps</xpath>
+    <value>
+      <li Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VNPE_NutrientPasteNet</pipeNet>
+      </li>
+    </value>
+					</Operation>
+					<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="FNutrientPasteDispenser"]/comps</xpath>
+    <value>
+      <li Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VNPE_NutrientPasteNet</pipeNet>
+      </li>
+    </value>
+					</Operation>
+					<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="PrisonerNutrientPaste"]/comps</xpath>
+    <value>
+      <li Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VNPE_NutrientPasteNet</pipeNet>
+      </li>
+    </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VNPE - Paste Dripper Thirst Patch</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+	<li Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+						
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]/comps/li[@Class="DubsBadHygiene.CompProperties_Pipe"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]/comps</xpath>
+						<value>
+							<li Class="CompProperties_Forbiddable"/>
+							<li Class="DubsBadHygiene.CompProperties_Pipe">
+								<mode>Sewage</mode>
+							</li>
+							<li Class="DubsBadHygiene.CompProperties_Blockage"/>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]/placeWorkers</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]</xpath>
+						<value>
+							<placeWorkers/>
+						</value>
+					</nomatch>
+				</li>
+										
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]/placeWorkers/li[text()="DubsBadHygiene.PlaceWorker_SewageGrid"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]/placeWorkers</xpath>
+						<value>
+							<li>DubsBadHygiene.PlaceWorker_SewageGrid</li>
+						</value>
+					</nomatch>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI" and @DBHThirstAddon="true"]</xpath>
+					<nomatch Class="PatchOperationAttributeSet">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperI"]</xpath>
+						<attribute>DBHThirstAddon</attribute>
+						<value>true</value>
+					</nomatch>
+				</li>-->
+			</operations>
+		</match>
+	</li>
+
+	<li Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+						
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]/comps/li[@Class="DubsBadHygiene.CompProperties_Pipe"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]/comps</xpath>
+						<value>
+							<li Class="CompProperties_Forbiddable"/>
+							<li Class="DubsBadHygiene.CompProperties_Pipe">
+								<mode>Sewage</mode>
+							</li>
+							<li Class="DubsBadHygiene.CompProperties_Blockage"/>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]/placeWorkers</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]</xpath>
+						<value>
+							<placeWorkers/>
+						</value>
+					</nomatch>
+				</li>
+										
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]/placeWorkers/li[text()="DubsBadHygiene.PlaceWorker_SewageGrid"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]/placeWorkers</xpath>
+						<value>
+							<li>DubsBadHygiene.PlaceWorker_SewageGrid</li>
+						</value>
+					</nomatch>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF" and @DBHThirstAddon="true"]</xpath>
+					<nomatch Class="PatchOperationAttributeSet">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperF"]</xpath>
+						<attribute>DBHThirstAddon</attribute>
+						<value>true</value>
+					</nomatch>
+				</li>-->
+			</operations>
+		</match>
+	</li>
+			
+	<li Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+						
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]/comps/li[@Class="DubsBadHygiene.CompProperties_Pipe"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]/comps</xpath>
+						<value>
+							<li Class="CompProperties_Forbiddable"/>
+							<li Class="DubsBadHygiene.CompProperties_Pipe">
+								<mode>Sewage</mode>
+							</li>
+							<li Class="DubsBadHygiene.CompProperties_Blockage"/>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]/placeWorkers</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]</xpath>
+						<value>
+							<placeWorkers/>
+						</value>
+					</nomatch>
+				</li>
+										
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]/placeWorkers/li[text()="DubsBadHygiene.PlaceWorker_SewageGrid"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]/placeWorkers</xpath>
+						<value>
+							<li>DubsBadHygiene.PlaceWorker_SewageGrid</li>
+						</value>
+					</nomatch>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP" and @DBHThirstAddon="true"]</xpath>
+					<nomatch Class="PatchOperationAttributeSet">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperP"]</xpath>
+						<attribute>DBHThirstAddon</attribute>
+						<value>true</value>
+					</nomatch>
+				</li>-->
+			</operations>
+		</match>
+	</li>
+	</operations>
+		</match>
+	</Operation>
+				
+				
+				
+				
+</Patch>

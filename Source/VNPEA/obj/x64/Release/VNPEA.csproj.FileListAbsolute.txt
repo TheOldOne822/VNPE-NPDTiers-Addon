@@ -1,0 +1,7 @@
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\1.4\Assemblies\VNPEA.dll
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\1.4\Assemblies\VNPEA.pdb
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\VNPEA.csproj.AssemblyReference.cache
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\VNPEA.csproj.CoreCompileInputs.cache
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\VNPEA.csproj.CopyComplete
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\VNPEA.dll
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\VNPEA.pdb

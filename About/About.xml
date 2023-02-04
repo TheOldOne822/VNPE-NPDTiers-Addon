@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>VNPE NPDTiers Addon</name>
+  <author>TheOldOne</author>
+  <url></url>
+  <description>Addon for Vanilla Nutrient Paste Expanded to support NPDTiers hoppers and add Taps Feeders and Drippers for NPDTiers paste.
+  
+  Also allows attaching NPDTiers dispensers to VNPE network but they only make NPDTiers paste if they have hoppers with food attached to them if not they give only vanilla paste pulled from the VNPE network.
+  Needs a better programmer than I am to make dispensers give NPDTiers paste when they pull from the VNPE network but the Taps work fine.
+  
+  Drippers work with VNPE - Paste Dripper Thirst Patch</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <packageId>VNPEAddon</packageId>
+  <modDependencies>
+    <li>
+      <packageId>mlie.npdtiers</packageId>
+      <displayName>NPDTiers - The Nutrient Paste Expansion Mod (Continued)</displayName>
+      <downloadUrl>https://github.com/emipa606/NPDTiers/releases/latest</downloadUrl>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2043895447</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>vanillaexpanded.vnutriente</packageId>
+      <displayName>Vanilla Nutrient Paste Expanded</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>vanillaexpanded.vnutriente</li>
+    <li>mlie.npdtiers</li>
+  </loadAfter>
+  <loadBefore>
+    <li>spacemoth.vnpepdthirst</li>
+  </loadBefore>
+</ModMetaData>

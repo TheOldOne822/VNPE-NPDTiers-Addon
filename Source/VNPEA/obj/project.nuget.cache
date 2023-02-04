@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XMg4fUgx6Ksu1jxXBKpgYmmuCm68Aco8MdDP2cqigY9Fpe2EIFof/BiPzbZ3amzuBbM1tGE+QnJAlIRaB1/byA==",
+  "success": true,
+  "projectFilePath": "D:\\games\\GOG Galaxy\\Games\\RimWorld\\Mods\\VNPEAddon\\Source\\VNPEA\\VNPEA.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Michael\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}
