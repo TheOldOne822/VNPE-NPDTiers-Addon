@@ -425,7 +425,7 @@
         <filter>
           <disallowNotEverStorable>true</disallowNotEverStorable>
           <thingDefs>
-            <li>MealFineNutrientPaste</li>
+            <li>MealPrisonerNutrientPaste</li>
           </thingDefs>
         </filter>
       </fixedStorageSettings>
@@ -434,7 +434,7 @@
         <filter>
           <disallowNotEverStorable>true</disallowNotEverStorable>
           <thingDefs>
-            <li>MealFineNutrientPaste</li>
+            <li>MealPrisonerNutrientPaste</li>
           </thingDefs>
         </filter>
       </defaultStorageSettings>
