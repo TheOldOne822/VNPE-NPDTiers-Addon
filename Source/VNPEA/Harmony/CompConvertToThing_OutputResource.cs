@@ -58,6 +58,28 @@ namespace VNPEA
                 net.DistributeAmongStorage(2f / 3f);
                 return false;
             }
+            if (parent.def.defName == "VNPEA_NutrientPasteFeederBaby")
+            {
+                var net = __instance.PipeNet;
+
+                var meal = ThingMaker.MakeThing(ThingDefOf.BabyFood);
+                if (meal.TryGetComp<CompIngredients>() is CompIngredients ingredients)
+                {
+                    for (int i = 0; i < net.storages.Count; i++)
+                    {
+                        var storage = net.storages[i].parent;
+                        if (storage.TryGetComp<CompRegisterIngredients>() is CompRegisterIngredients storageIngredients)
+                        {
+                            for (int o = 0; o < storageIngredients.ingredients.Count; o++)
+                                ingredients.RegisterIngredient(storageIngredients.ingredients[o]);
+                        }
+                    }
+                }
+
+                meal.stackCount = amount * 18;
+                GenPlace.TryPlaceThing(meal, parent.Position, parent.Map, ThingPlaceMode.Near);
+                return false;
+            }
             if (parent.def.defName == "VNPEA_NutrientPasteFeederP")
             {
                 var net = __instance.PipeNet;
