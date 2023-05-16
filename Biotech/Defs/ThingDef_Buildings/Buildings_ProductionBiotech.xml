@@ -7,9 +7,9 @@
     <description>A small pipe output that allows colonists and citizens to pick up nutrient paste. Packaged for covenant feeding of babies.</description>
     <thingClass>VNPE.Building_Feeder</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath>
+      <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeederBaby</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <color>(255,223,15)</color>
+      <color>(255,134,10)</color>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(1,1)</drawSize>
       <damageData>
@@ -86,6 +86,78 @@
       <li>NutrientPaste</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>VNPEA_NutrientPasteDripperBaby</defName>
+    <label>baby nutrient paste dripper</label>
+    <description>A crib side device that feeds a baby lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the crib.</description>
+    <thingClass>VNPEA.Building_DripperBaby</thingClass>
+    <graphicData>
+      <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripperBaby</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(255,134,10)</color>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.55, 0.30, 0.40)</volume>
+      </shadowData>
+      <damageData>
+        <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+        <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+        <rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+        <rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+        <cornerTR>Damage/Corner</cornerTR>
+      </damageData>
+    </graphicData>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <researchPrerequisites>
+      <li>NutrientPaste</li>
+    </researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.2</fillPercent>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+      <forceShowRoomStats>true</forceShowRoomStats>
+    </building>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>2</maxSimultaneous>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+        <mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
+      </li>
+      <li Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VNPE_NutrientPasteNet</pipeNet>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>125</basePowerConsumption>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <uiIconScale>0.85</uiIconScale>
+    <tickerType>Rare</tickerType>
   </ThingDef>
 
 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VNPE - Paste Dripper Thirst Patch</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+	<li Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]/comps</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+						
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]/comps/li[@Class="DubsBadHygiene.CompProperties_Pipe"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]/comps</xpath>
+						<value>
+							<li Class="CompProperties_Forbiddable"/>
+							<li Class="DubsBadHygiene.CompProperties_Pipe">
+								<mode>Sewage</mode>
+							</li>
+							<li Class="DubsBadHygiene.CompProperties_Blockage"/>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]/placeWorkers</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]</xpath>
+						<value>
+							<placeWorkers/>
+						</value>
+					</nomatch>
+				</li>
+										
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]/placeWorkers/li[text()="DubsBadHygiene.PlaceWorker_SewageGrid"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VNPEA_NutrientPasteDripperBaby"]/placeWorkers</xpath>
+						<value>
+							<li>DubsBadHygiene.PlaceWorker_SewageGrid</li>
+						</value>
+					</nomatch>
+				</li>
+				
+
+			</operations>
+		</match>
+	</li>
+
+	</operations>
+		</match>
+	</Operation>
+				
+				
+				
+				
+</Patch>

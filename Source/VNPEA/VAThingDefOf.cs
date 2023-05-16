@@ -10,6 +10,7 @@ namespace VNPEA
         public static ThingDef INutrientPasteDispenser;
         public static ThingDef VNPEA_NutrientPasteFeederI;
         public static ThingDef VNPEA_NutrientPasteDripperI;
+        public static ThingDef VNPEA_NutrientPasteDripperBaby;
         public static ThingDef VNPEA_NutrientPasteTapF;
         public static ThingDef FNutrientPasteDispenser;
         public static ThingDef VNPEA_NutrientPasteFeederF;

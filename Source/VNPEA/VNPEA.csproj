@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <OutputPath>..\..\Biotech\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,20 +25,20 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\Biotech\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <OutputPath>bin\x64\Debug\</OutputPath>
+    <OutputPath>..\..\Biotech\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <OutputPath>..\..\Biotech\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -48,57 +48,57 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\mod code\HarmonyRimWorld-1.5.0.0\Current\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="0MultiplayerAPI">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\0MultiplayerAPI.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\0MultiplayerAPI.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ExplosiveTrailsEffect">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\ExplosiveTrailsEffect.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\ExplosiveTrailsEffect.dll</HintPath>
     </Reference>
     <Reference Include="GraphicCustomization">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\GraphicCustomization.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\GraphicCustomization.dll</HintPath>
     </Reference>
     <Reference Include="HarmonyMod">
-      <HintPath>..\..\..\..\mod code\HarmonyRimWorld-1.5.0.0\Current\Assemblies\HarmonyMod.dll</HintPath>
+      <HintPath>..\..\..\2009463077\Current\Assemblies\HarmonyMod.dll</HintPath>
     </Reference>
     <Reference Include="HeavyWeapons">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\HeavyWeapons.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\HeavyWeapons.dll</HintPath>
     </Reference>
     <Reference Include="KCSG">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\KCSG.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\KCSG.dll</HintPath>
     </Reference>
     <Reference Include="MVCF">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\MVCF.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\MVCF.dll</HintPath>
     </Reference>
     <Reference Include="NoCamShakeExplosions">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\NoCamShakeExplosions.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\NoCamShakeExplosions.dll</HintPath>
     </Reference>
     <Reference Include="NutrientPasteTiers">
       <HintPath>..\..\..\2043895447\1.4\Assemblies\NutrientPasteTiers.dll</HintPath>
     </Reference>
     <Reference Include="OPToxic">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\OPToxic.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\OPToxic.dll</HintPath>
     </Reference>
     <Reference Include="Outposts">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\Outposts.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\Outposts.dll</HintPath>
     </Reference>
     <Reference Include="PipeSystem">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\PipeSystem.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\PipeSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="RecipeInheritance">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\RecipeInheritance.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\RecipeInheritance.dll</HintPath>
     </Reference>
     <Reference Include="RRO">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\RRO.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\RRO.dll</HintPath>
     </Reference>
     <Reference Include="SmokingGun">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\SmokingGun.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\SmokingGun.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -118,23 +118,24 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VanillaStorytellersExpanded">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\VanillaStorytellersExpanded.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\VanillaStorytellersExpanded.dll</HintPath>
     </Reference>
     <Reference Include="VanillaWeaponsExpandedLaser">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\VanillaWeaponsExpandedLaser.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\VanillaWeaponsExpandedLaser.dll</HintPath>
     </Reference>
     <Reference Include="VFECore">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\VFECore.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
     </Reference>
     <Reference Include="VNPE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\2920385763\1.4\Assemblies\VNPE.dll</HintPath>
     </Reference>
     <Reference Include="VWEMakeshift">
-      <HintPath>..\..\..\..\mod code\VanillaExpandedFramework-170123\1.4\Assemblies\VWEMakeshift.dll</HintPath>
+      <HintPath>..\..\..\2023507013\1.4\Assemblies\VWEMakeshift.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buildings\Building_DripperBaby.cs" />
     <Compile Include="Buildings\Building_DripperF.cs" />
     <Compile Include="Buildings\Building_DripperP.cs" />
     <Compile Include="Buildings\Building_DripperI.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Buildings\Building_NutrientPasteTapP.cs" />
     <Compile Include="Buildings\Building_NutrientPasteTapI.cs" />
     <Compile Include="Harmony\Building_NutrientPasteDispenser_TryDispenseFood.cs" />
+    <Compile Include="Harmony\ThingListGroupHelper_Includes.cs" />
     <Compile Include="Harmony\CompConvertToThing_OutputResource.cs" />
     <Compile Include="Harmony\Room_NotifyRoomShapeChanged.cs" />
     <Compile Include="Init.cs" />

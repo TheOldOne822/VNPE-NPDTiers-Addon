@@ -5,3 +5,12 @@ D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\V
 D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\VNPEA.csproj.CopyComplete
 D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\VNPEA.dll
 D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPEAddon\Source\VNPEA\obj\x64\Release\VNPEA.pdb
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\1.4\Assemblies\VNPEA.dll
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\1.4\Assemblies\VNPEA.pdb
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\Source\VNPEA\obj\x64\Release\VNPEA.csproj.AssemblyReference.cache
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\Source\VNPEA\obj\x64\Release\VNPEA.csproj.CoreCompileInputs.cache
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\Source\VNPEA\obj\x64\Release\VNPEA.csproj.CopyComplete
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\Source\VNPEA\obj\x64\Release\VNPEA.dll
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\Source\VNPEA\obj\x64\Release\VNPEA.pdb
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\Biotech\Assemblies\VNPEA.dll
+D:\games\GOG Galaxy\Games\RimWorld\Mods\VNPE-NPDTiers-Addon\Biotech\Assemblies\VNPEA.pdb

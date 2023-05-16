@@ -6,47 +6,55 @@ using UnityEngine;
 using Verse;
 using VNPE;
 using Verse.Sound;
+using System;
 
 namespace VNPEA
 {
     [StaticConstructorOnStartup]
-    public class Building_NutrientPasteTapF : Building_NutrientPasteDispenser
+    public class Building_NutrientPasteTapF : Building_NutrientPasteTap
     {
-        public CompResource resourceComp;
 
-        public bool CanDispenseNowOverride => powerComp.PowerOn && resourceComp.PipeNet is PipeNet net && net.Stored >= 1.3333f;
+        new public bool CanDispenseNowOverride => powerComp.PowerOn && resourceComp.PipeNet is PipeNet net && net.Stored >= 4f / 3f;
         public override Color DrawColor => !this.IsSociallyProper(null, false) ? Building_Bed.SheetColorForPrisoner : base.DrawColor;
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
-                yield return gizmo;
-
-        }
-
-        public override string GetInspectString()
-        {
-            var builder = new StringBuilder();
-            builder.AppendLine(base.GetInspectString());
-
-            if (!this.IsSociallyProper(null, false))
-                builder.AppendLine("InPrisonCell".Translate());
-
-            return builder.ToString().Trim();
+                if (!(gizmo.ToString() == "Command(label=Extract 5 meals, defaultDesc=Extract 5 meals)"))
+                    if (!(gizmo.ToString() == "Command(label=Extract 10 meals, defaultDesc=Extract 10 meals)"))
+                        if (!(gizmo.ToString() == "Command(label=Extract 20 meals, defaultDesc=Extract 20 meals)"))
+                        {
+                            yield return gizmo;
+                        }
+            yield return new Command_Action
+            {
+                action = () => TryDropFood(5),
+                defaultLabel = "VNPE_Extract5".Translate() ,
+                defaultDesc = "VNPE_Extract5".Translate(),
+                icon = aIcon,
+            };
+            yield return new Command_Action
+            {
+                action = () => TryDropFood(10),
+                defaultLabel = "VNPE_Extract10".Translate(),
+                defaultDesc = "VNPE_Extract10".Translate(),
+                icon = bIcon,
+            };
+            yield return new Command_Action
+            {
+                action = () => TryDropFood(20),
+                defaultLabel = "VNPE_Extract20".Translate(),
+                defaultDesc = "VNPE_Extract20".Translate(),
+                icon = cIcon,
+            };
         }
 
         public override bool HasEnoughFeedstockInHoppers()
         {
-            return resourceComp.PipeNet is PipeNet net && net.Stored >= 1;
+            return resourceComp.PipeNet is PipeNet net && net.Stored >= 4f / 3f;
         }
 
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-            resourceComp = GetComp<CompResource>();
-            powerComp = GetComp<CompPowerTrader>();
-        }
-        public Thing TryDispenseFoodOverride()
+        new public Thing TryDispenseFoodOverride()
         {
             var net = resourceComp.PipeNet;
             def.building.soundDispense.PlayOneShot(new TargetInfo(Position, Map));

@@ -36,6 +36,11 @@ namespace VNPEA
                         props.linkableFacilities.Add(VAThingDefOf.VNPEA_NutrientPasteDripperF);
                     }
 
+                    if (!props.linkableFacilities.Contains(VAThingDefOf.VNPEA_NutrientPasteDripperBaby))
+                    {
+                        props.linkableFacilities.Add(VAThingDefOf.VNPEA_NutrientPasteDripperBaby);
+                    }
+
                 }
 
 
@@ -45,9 +50,11 @@ namespace VNPEA
             var dripperi = DefDatabase<ThingDef>.GetNamed("VNPEA_NutrientPasteDripperI");
             dripperi.GetCompProperties<CompProperties_Facility>().ResolveReferences(dripperi);
             var dripperp = DefDatabase<ThingDef>.GetNamed("VNPEA_NutrientPasteDripperP");
-            dripperi.GetCompProperties<CompProperties_Facility>().ResolveReferences(dripperp);
+            dripperp.GetCompProperties<CompProperties_Facility>().ResolveReferences(dripperp);
             var dripperf = DefDatabase<ThingDef>.GetNamed("VNPEA_NutrientPasteDripperF");
-            dripperi.GetCompProperties<CompProperties_Facility>().ResolveReferences(dripperf);
+            dripperf.GetCompProperties<CompProperties_Facility>().ResolveReferences(dripperf);
+            var dripperBaby = DefDatabase<ThingDef>.GetNamed("VNPEA_NutrientPasteDripperBaby");
+            dripperBaby.GetCompProperties<CompProperties_Facility>().ResolveReferences(dripperBaby);
         }
     }
 }

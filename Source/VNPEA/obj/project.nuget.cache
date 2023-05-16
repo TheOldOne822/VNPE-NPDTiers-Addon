@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XMg4fUgx6Ksu1jxXBKpgYmmuCm68Aco8MdDP2cqigY9Fpe2EIFof/BiPzbZ3amzuBbM1tGE+QnJAlIRaB1/byA==",
+  "dgSpecHash": "vKkmFSvHXZjyQDhu+6easkmUHYoldz+Ehg3XSAN2YCGrilG5IY27WNrC2PrGZ7O2hSm/tyPOT2wyqU7EileW8g==",
   "success": true,
-  "projectFilePath": "D:\\games\\GOG Galaxy\\Games\\RimWorld\\Mods\\VNPEAddon\\Source\\VNPEA\\VNPEA.csproj",
+  "projectFilePath": "D:\\games\\GOG Galaxy\\Games\\RimWorld\\Mods\\VNPE-NPDTiers-Addon\\Source\\VNPEA\\VNPEA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
   ],

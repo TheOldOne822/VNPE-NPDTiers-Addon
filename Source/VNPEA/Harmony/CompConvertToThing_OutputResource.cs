@@ -79,7 +79,7 @@ namespace VNPEA
                 meal.stackCount = amount * 18;
                 GenPlace.TryPlaceThing(meal, parent.Position, parent.Map, ThingPlaceMode.Near);
                 return false;
-            }
+            } 
             if (parent.def.defName == "VNPEA_NutrientPasteFeederP")
             {
                 var net = __instance.PipeNet;

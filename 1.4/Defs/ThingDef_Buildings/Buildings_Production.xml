@@ -6,7 +6,7 @@
     <description>An upgraded version of the nutrient paste tap.</description>
     <thingClass>VNPEA.Building_NutrientPasteTapI</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteTap/NutrientPasteTap</texPath>
+      <texPath>Things/Building/NutrientPasteTap/NutrientPasteTapI</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <color>(192,136,220)</color>
       <shaderType>CutoutComplex</shaderType>
@@ -73,7 +73,7 @@
     <description>An upgraded version of the nutrient paste tap.</description>
     <thingClass>VNPEA.Building_NutrientPasteTapF</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteTap/NutrientPasteTap</texPath>
+      <texPath>Things/Building/NutrientPasteTap/NutrientPasteTapF</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <color>(192,214,255)</color>
       <shaderType>CutoutComplex</shaderType>
@@ -142,7 +142,7 @@
     <description>An upgraded version of the nutrient paste tap.</description>
     <thingClass>VNPEA.Building_NutrientPasteTapP</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteTap/NutrientPasteTap</texPath>
+      <texPath>Things/Building/NutrientPasteTap/NutrientPasteTapP</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <color>(212,212,212)</color>
       <shaderType>CutoutComplex</shaderType>
@@ -209,7 +209,7 @@
     <description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
     <thingClass>VNPE.Building_Feeder</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath>
+      <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeederI</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <color>(192,136,220)</color>
       <shaderType>CutoutComplex</shaderType>
@@ -295,7 +295,7 @@
     <description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
     <thingClass>VNPE.Building_Feeder</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath>
+      <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeederF</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <color>(192,214,255)</color>
       <shaderType>CutoutComplex</shaderType>
@@ -384,7 +384,7 @@
     <description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
     <thingClass>VNPE.Building_Feeder</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath>
+      <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeederP</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <color>(212,212,212)</color>
       <shaderType>CutoutComplex</shaderType>
@@ -471,7 +471,7 @@
     <description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
     <thingClass>VNPEA.Building_DripperI</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath>
+      <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripperI</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <color>(192,136,220)</color>
@@ -516,7 +516,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Facility">
-        <maxSimultaneous>1</maxSimultaneous>
+        <maxSimultaneous>2</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
         <mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
       </li>
@@ -543,7 +543,7 @@
     <description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
     <thingClass>VNPEA.Building_DripperF</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath>
+      <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripperF</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <color>(192,214,255)</color>
@@ -590,7 +590,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Facility">
-        <maxSimultaneous>1</maxSimultaneous>
+        <maxSimultaneous>2</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
         <mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
       </li>
@@ -617,7 +617,7 @@
     <description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
     <thingClass>VNPEA.Building_DripperP</thingClass>
     <graphicData>
-      <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath>
+      <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripperP</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <color>(212,212,212)</color>
@@ -662,7 +662,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Facility">
-        <maxSimultaneous>1</maxSimultaneous>
+        <maxSimultaneous>2</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
         <mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
       </li>
